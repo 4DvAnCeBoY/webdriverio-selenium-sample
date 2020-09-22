@@ -12,6 +12,7 @@ steps:
   - ls
   - pwd
   
+  
 - name: build
   image: node
   secrets: [LT_USERNAME, LT_ACCESS_KEY]
