@@ -20,7 +20,7 @@ steps:
   - ls
   - pwd
   - ps aux
-  - sleep 1000
+  - sleep 100
   
   
 - name: test
