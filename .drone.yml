@@ -38,3 +38,4 @@ steps:
   - export LT_USERNAME=$user
   - export LT_ACCESS_KEY=$key
   - npm install
+  - npm test
