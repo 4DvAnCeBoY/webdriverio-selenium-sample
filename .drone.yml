@@ -10,8 +10,7 @@ steps:
   secrets: [LT_USERNAME, LT_ACCESS_KEY]
   commands:
   - ls
-  - docker run -it  lambdatest/tunnel -v
-  - ./LT -user $LT_USERNAME -key $LT_ACCESS_KEY
+  - curl 127.0.0.1:13001/api/v1.0/info
   
 - name: build
   image: node
