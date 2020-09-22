@@ -22,9 +22,9 @@ steps:
   - ps aux
   
   
-- name: build
+- name: test
   image: node
   secrets: [LT_USERNAME, LT_ACCESS_KEY]
   commands:
   - npm install
-  - npm run single
+  - npm test
