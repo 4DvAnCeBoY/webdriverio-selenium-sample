@@ -19,6 +19,7 @@ steps:
   commands:
   - ls
   - pwd
+  - wget 127.0.0.1:8000/api/v1.0/info
   
   
 - name: build
