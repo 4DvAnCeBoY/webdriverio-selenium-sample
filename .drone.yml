@@ -8,14 +8,14 @@ steps:
   type: docker
   image: lambdatest/tunnel
   environment:
-    USERNAME:
+    user:
       from_secret: LT_USERNAME
-    PASSWORD:
+    key:
       from_secret: LT_ACCESS_KEY
   settings:
     build_args_from_env:
-    - USERNAME
-    - PASSWORD
+    - user
+    - key
   commands:
   - ls
   - pwd
@@ -26,15 +26,15 @@ steps:
 - name: test
   image: node
   environment:
-    USERNAME:
+    user:
       from_secret: LT_USERNAME
-    PASSWORD:
+    key:
       from_secret: LT_ACCESS_KEY
   settings:
     build_args_from_env:
-    - USERNAME
-    - PASSWORD
+    - user
+    - key
   commands:
-  - export LT_USERNAME=$USERNAME
-  - export LT_ACCESS_KEY=$PASSWORD
+  - export LT_USERNAME= [user]
+  - export LT_ACCESS_KEY= [key]
   - npm install
