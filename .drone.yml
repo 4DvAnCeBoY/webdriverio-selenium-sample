@@ -10,7 +10,7 @@ steps:
   secrets: [LT_USERNAME, LT_ACCESS_KEY]
   commands:
   - ls
-  - curl 127.0.0.1:13001/api/v1.0/info
+  - pwd
   
 - name: build
   image: node
