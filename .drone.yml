@@ -24,7 +24,15 @@ steps:
   
 - name: test
   image: node
-  secrets: [LT_USERNAME, LT_ACCESS_KEY]
+  environment:
+    USERNAME:
+      from_secret: LT_USERNAME
+    PASSWORD:
+      from_secret: LT_ACCESS_KEY
+  settings:
+    build_args_from_env:
+    - USERNAME
+    - PASSWORD
   commands:
   - npm install
   - npm test
