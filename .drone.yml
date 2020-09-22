@@ -35,6 +35,6 @@ steps:
     - user
     - key
   commands:
-  - export LT_USERNAME= [user]
-  - export LT_ACCESS_KEY= [key]
+  - export LT_USERNAME= $user
+  - export LT_ACCESS_KEY= $key
   - npm install
